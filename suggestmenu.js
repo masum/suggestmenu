@@ -9,6 +9,7 @@ function suggestMenu(param) {
   this.menu=null;
   this.list=[];
   this.onclick=param.onclick;
+  this.onremake=param.onremake;
   this.field=param.field;
   this.caret=null;
   this.id="pmenu_"+param.id;
@@ -75,7 +76,7 @@ suggestMenu.prototype.toggleMenu=function(func) {
     if ($this.existMenu()) {
       toggle(func);
     }else{
-      $this.show(null);
+      $this.onremake();
     }
     return false;
   } else {
