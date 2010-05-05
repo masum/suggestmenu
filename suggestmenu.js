@@ -99,7 +99,7 @@ suggestMenu.prototype.show=function(list) {
 suggestMenu.prototype.remakeMenuItem=function(list) {
   var $this=this;
   $.each(list,function(i,v) {
-    var item=$("<div class='smenu_item'>").text(v.name).appendTo($this.menu);
+    var item=$("<div class='smenu_item'>").text(v.value).appendTo($this.menu);
     item.attr("id","smenu_"+i);
   });
 }
